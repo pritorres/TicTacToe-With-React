@@ -9,7 +9,9 @@ const Play = () => {
 			<button clasNameName="rounded-pill">Start Over</button>
 			<div className="container">
 				<div className="row">
-					<div className="square col-4">1</div>
+					<div className={`square col-4`} onClick={() => {}}>
+						1
+					</div>
 					<div className="square col-4">2</div>
 					<div className="square col-4">3</div>
 					<div className="square col-4">4</div>
