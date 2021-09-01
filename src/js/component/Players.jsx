@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { event } from "jquery";
 
 const Players = props => {
+	const { player1, setjugadorActivo } = props;
 	return (
 		<>
 			<div className="container p-5">
@@ -17,7 +18,7 @@ const Players = props => {
 						}}
 						type="text"
 						placeholder="Player 1 username"
-						value={props.player1}
+						value={player1}
 					/>
 					<input
 						onChange={e => {
@@ -29,15 +30,18 @@ const Players = props => {
 					/>
 					<div className="d-flex ">
 						<div
-							className={`bg-secondary ${
-								jugadorACTIVO === "jugador1"
-									? "cambiocolor"
-									: " "
-							}`}>
-							<h1 className="text-warning">X</h1>
+							className={`cambiocolor`}
+							onClick={() => {
+								setjugadorActivo("X");
+							}}>
+							X
 						</div>
-						<div className="bg-secondary">
-							<h1 className="text-primary">O</h1>
+						<div
+							className={`cambiocolor`}
+							onClick={() => {
+								setjugadorActivo("O");
+							}}>
+							O
 						</div>
 					</div>
 				</div>
@@ -51,9 +55,7 @@ Players.propTypes = {
 	player2: PropTypes.string,
 	onchangeplayer1: PropTypes.string,
 	onchangeplayer2: PropTypes.string,
-	jugadorACtivo1: PropTypes.string,
-	jugadorACtivo2: PropTypes.string,
-	jugadorACTIVO: PropTypes.string
+	setjugadorActivo: PropTypes.string
 };
 
 export default Players;

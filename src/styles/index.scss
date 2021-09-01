@@ -9,6 +9,13 @@
     align-items: center;
     font-size: 90px;
 }
-.cambiocolor:active {
-    background: orange;
+.cambiocolor {
+    font-size: 40px;
+    width: 60px;
+    height: 60px;
+    background: rgb(131, 130, 129);
+}
+
+.cambiocolor:hover {
+    background:  rgb(175, 171, 166);;
 }
