@@ -28,7 +28,7 @@ const Players = props => {
 						placeholder="Player 2 username"
 						value={props.player2}
 					/>
-					<div className="d-flex ">
+					<div className="d-flex justify-content-center">
 						<div
 							className={`cambiocolor`}
 							onClick={() => {
