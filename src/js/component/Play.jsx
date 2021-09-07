@@ -10,7 +10,7 @@ const Play = props => {
 	} = props;
 
 	return (
-		<div className="container bg-dark p-5">
+		<div className="container bg-info p-5 rounded">
 			<br />
 			<h5 className="text-white">It is X turn</h5>
 			<br />

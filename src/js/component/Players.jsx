@@ -11,8 +11,10 @@ const Players = props => {
 				<br />
 				<h5 className="text-white">Pick A Weapon</h5>
 				<br />
-				<div className="bg-warning m-5 ">
-					<h2 className="text-white">CHOOSE YOUR WEAPON</h2>
+				<div className="bg-info rounded">
+					<h2 className="text-white font-italic">
+						CHOOSE YOUR WEAPON
+					</h2>
 					<input
 						onChange={evento => {
 							props.onchangeplayer1(evento.target.value);
@@ -29,7 +31,7 @@ const Players = props => {
 						placeholder="Player 2 username"
 						value={player2}
 					/>
-					<div className="d-flex justify-content-center">
+					<div className="d-flex justify-content-center ">
 						<div
 							className={`cambiocolor`}
 							onClick={() => {

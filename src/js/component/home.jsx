@@ -31,8 +31,9 @@ const Home = () => {
 			let newJugadas = [...jugadas];
 			newJugadas[posicion] = jugada;
 			setJugadas(newJugadas);
-			clickMatrix();
 			//validar aqui ganador de la partida
+			let ganador = validarGanador();
+			clickMatrix();
 		}
 	};
 	const clickMatrix = () => {
@@ -97,17 +98,9 @@ const Home = () => {
 		console.log(resultado);
 	}, [jugadas]);
 
-	//funcion para guardar al ganador
-
-	const ganadorFinal = () => {
-		if (validarGanador === true) {
-			alert(jugadorActivoActual + "Wins");
-		}
-	};
-
 	return (
-		<div className="bg-dark text-center">
-			<h4 className="text-white">Tic Tac Toe in React.js</h4>
+		<div className="text-center">
+			<h4 className="text-white pt-5">Tic Tac Toe in React.js</h4>
 			{!todosLlenos && (
 				<Players
 					player1={player1}
