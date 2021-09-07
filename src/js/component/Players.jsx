@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 import { event } from "jquery";
 
 const Players = props => {
-	const { player1, setjugadorActivo } = props;
+	const { player1, setJugadorActivo, player2 } = props;
+
 	return (
 		<>
 			<div className="container p-5">
@@ -26,20 +27,20 @@ const Players = props => {
 						}}
 						type="text"
 						placeholder="Player 2 username"
-						value={props.player2}
+						value={player2}
 					/>
 					<div className="d-flex justify-content-center">
 						<div
 							className={`cambiocolor`}
 							onClick={() => {
-								setjugadorActivo("X");
+								setJugadorActivo("X");
 							}}>
 							X
 						</div>
 						<div
 							className={`cambiocolor`}
 							onClick={() => {
-								setjugadorActivo("O");
+								setJugadorActivo("O");
 							}}>
 							O
 						</div>
@@ -53,9 +54,9 @@ const Players = props => {
 Players.propTypes = {
 	player1: PropTypes.string,
 	player2: PropTypes.string,
-	onchangeplayer1: PropTypes.string,
-	onchangeplayer2: PropTypes.string,
-	setjugadorActivo: PropTypes.string
+	onchangeplayer1: PropTypes.func,
+	onchangeplayer2: PropTypes.func,
+	setJugadorActivo: PropTypes.func
 };
 
 export default Players;
