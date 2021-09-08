@@ -22,28 +22,28 @@ const Play = props => {
 			<div className="container">
 				<div className="row">
 					<div
-						className={`square col-4`}
+						className={`square col-4 border-top-0 border-left-0`}
 						onClick={() => {
 							jugadaPosicion(0, jugadorActivoActual);
 						}}>
 						{jugadas[0]}
 					</div>
 					<div
-						className={`square col-4`}
+						className={`square col-4 border-top-0`}
 						onClick={() => {
 							jugadaPosicion(1, jugadorActivoActual);
 						}}>
 						{jugadas[1]}
 					</div>
 					<div
-						className={`square col-4`}
+						className={`square col-4 border-top-0 border-right-0`}
 						onClick={() => {
 							jugadaPosicion(2, jugadorActivoActual);
 						}}>
 						{jugadas[2]}
 					</div>
 					<div
-						className={`square col-4`}
+						className={`square col-4 border-left-0`}
 						onClick={() => {
 							jugadaPosicion(3, jugadorActivoActual);
 						}}>
@@ -57,28 +57,28 @@ const Play = props => {
 						{jugadas[4]}
 					</div>
 					<div
-						className={`square col-4`}
+						className={`square col-4 border-right-0`}
 						onClick={() => {
 							jugadaPosicion(5, jugadorActivoActual);
 						}}>
 						{jugadas[5]}
 					</div>
 					<div
-						className={`square col-4`}
+						className={`square col-4 border-bottom-0 border-left-0`}
 						onClick={() => {
 							jugadaPosicion(6, jugadorActivoActual);
 						}}>
 						{jugadas[6]}
 					</div>
 					<div
-						className={`square col-4`}
+						className={`square col-4 border-bottom-0 `}
 						onClick={() => {
 							jugadaPosicion(7, jugadorActivoActual);
 						}}>
 						{jugadas[7]}
 					</div>
 					<div
-						className={`square col-4`}
+						className={`square col-4 border-bottom-0 border-right-0`}
 						onClick={() => {
 							jugadaPosicion(8, jugadorActivoActual);
 						}}>
